@@ -65,7 +65,8 @@
   <li><a href="communication.html">Upcoming Event</a></li>
   </ul>
   </li>
-  <li><a href="contact.html">CONTACT US</a></li>
+  <li><a href="contact.html">CONTACT US & SIGN-UP</a></li>
+  <li><a href="/login.html">LOGIN</a></li>
   </ul>
   </div>
   
@@ -109,24 +110,21 @@
 <br></strong></ul>
 </blockquote>
 </article>
+<h1>Coments</h1>
 <section class="comments-block">
-<h3 class="comments-head">Comments</h3>
-<p>Coming Soon.....</p>
+
 </section>
 <section class="post-comment-form">
 <h3 class="comments-head">Add your comment</h3>
-<form class="form" role="form">
-<div class="row">
-<div class="form-group col-md-6 col-sm-6">
-<input type="text" class="form-control input-lg" placeholder="Your name">
-</div>
-<div class="form-group col-md-6 col-sm-6">
-<input type="email" class="form-control input-lg" placeholder="Your email">
-</div>
-</div>
+<form class="formone">
+  <div class="row">
+    <div class="form-group col-md-12">
+    <textarea name="title-comments" id="title-comments" cols="" rows="2" placeholder="Title"></textarea>
+    </div>
+    </div>
 <div class="row">
 <div class="form-group col-md-12">
-<textarea cols="8" rows="4" class="form-control input-lg" placeholder="Your comment"></textarea>
+<textarea name="content-comments" id="content-comments" cols="" rows="5" placeholder="Content"></textarea>
 </div>
 </div>
 <div class="row">
@@ -166,33 +164,31 @@
 <br></strong></ul>
 </blockquote>
 </article>
-<section class="comments-block">
-<h3 class="comments-head">Comments</h3>
-<p>Coming Soon.....</p>
+<h1>Comments</h1>
+<section class="comments-blocktwo">
+
+
 </section>
 <section class="post-comment-form">
-<h3 class="comments-head">Add your comment</h3>
-<form class="form" role="form">
-<div class="row">
-<div class="form-group col-md-6 col-sm-6">
-<input type="text" class="form-control input-lg" placeholder="Your name">
-</div>
-<div class="form-group col-md-6 col-sm-6">
-<input type="email" class="form-control input-lg" placeholder="Your email">
-</div>
-</div>
-<div class="row">
-<div class="form-group col-md-12">
-<textarea cols="8" rows="4" class="form-control input-lg" placeholder="Your comment"></textarea>
-</div>
-</div>
-<div class="row">
-<div class="form-group col-md-12">
-<button type="submit" class="btn btn-primary btn-lg">Submit your comment</button>
-</div>
-</div>
-</form>
-</section>
+  <h3 class="comments-head">Add your comment</h3>
+  <form class="formtwo" role="form">
+    <div class="row">
+      <div class="form-group col-md-12">
+      <textarea name="title-comments" id="title-comments" cols="" rows="2" placeholder="Title"></textarea>
+      </div>
+      </div>
+  <div class="row">
+  <div class="form-group col-md-12">
+  <textarea name="content-comments" id="content-comments" cols="" rows="5" placeholder="content"></textarea>
+  </div>
+  </div>
+  <div class="row">
+  <div class="form-group col-md-12">
+  <button type="submit" class="btn btn-primary btn-lg">Submit your comment</button>
+  </div>
+  </div>
+  </form>
+  </section>
 </div>
 
 
@@ -237,7 +233,8 @@
       <li><a href="health.html">Health</a></li>
       </ul>
       </li>
-  <li><a href="./contact.html">Contact us</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+      <li><a href="/login.html">LOGIN</a></li>
   </ul>
   </div>
   <div class="col-sm-6 col-md-3">
@@ -267,12 +264,43 @@
   </div>
   </footer>
   <!--end of footer-->
-
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+     <!-- TODO: Add SDKs for Firebase products that you want to use
+          https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
+     
+     <script>
+       // Your web app's Firebase configuration
+       // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+       var firebaseConfig = {
+         apiKey: "AIzaSyCap3QSswIYsLenYVTL8y45iY4zm-T4zRU",
+         authDomain: "churchproj-e6b4c.firebaseapp.com",
+         projectId: "churchproj-e6b4c",
+         storageBucket: "churchproj-e6b4c.appspot.com",
+         messagingSenderId: "440427847931",
+         appId: "1:440427847931:web:cc4485350b25754815105e",
+         measurementId: "G-X62332Y60H"
+       };
+       // Initialize Firebase
+       firebase.initializeApp(firebaseConfig);
+       firebase.analytics();
+       const auth = firebase.auth();
+       const db = firebase.firestore();
+       db.settings({timestampsInSnapshots: true});
+     </script>
 
 <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/ketchup.all.js"></script>
 <script src="js/script.js"></script>
+<script src="/auth.js"></script>  
+<script src="/app.js"></script>  
+<script src="index.js"></script>
+
+
 </body>
 
 <!-- Mirrored from demo.web3canvas.com/themeforest/our-church/blog-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Oct 2020 14:56:30 GMT -->
